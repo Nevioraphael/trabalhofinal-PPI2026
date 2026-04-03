@@ -1,0 +1,32 @@
+{
+  "name": "imoveis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nevioraphael/trabalhofinal-PPI2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Nevioraphael/trabalhofinal-PPI2026/issues"
+  },
+  "homepage": "https://github.com/Nevioraphael/trabalhofinal-PPI2026#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.20.0",
+    "node": "^25.9.0",
+    "server.js": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
