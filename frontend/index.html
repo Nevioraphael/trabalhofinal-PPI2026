@@ -33,7 +33,7 @@
 
     <hr>
 
-    <h3>Lista de Pessoas</h3>
+    <!--<h3>Lista de Pessoas</h3>
     <table class="table table-striped" id="tabelaPessoas">
         <thead>
             <tr>
@@ -59,7 +59,7 @@
         <tbody></tbody>
     </table>
 
-    <h4 id="msg" class="mt-3 text-danger"></h4>
+    <h4 id="msg" class="mt-3 text-danger"></h4>-->
     <script>
         function formatCPF(input) {
             let value = input.value.replace(/\D/g, '');
@@ -83,7 +83,7 @@
         };
 
         function carregarPessoas() {
-            fetch('http://localhost:3000/pessoas')
+            fetch('http://localhost:3000/pessoa')
                 .then(res => res.json())
                 .then(data => {
                     const tbody = document.querySelector('#tabelaPessoas tbody');
@@ -95,7 +95,7 @@
         }
 
         function carregarImoveis() {
-            fetch('http://localhost:3000/imoveis')
+            fetch('http://localhost:3000/imovel')
                 .then(res => res.json())
                 .then(data => {
                     const tbody = document.querySelector('#tabelaImoveis tbody');
@@ -118,7 +118,7 @@
             if (!data.pes_nome) return msg.innerText = 'Nome obrigatório';
             if (!validarEmail(data.pes_email)) return msg.innerText = 'Email inválido';
 
-            fetch('http://localhost:3000/pessoas', {
+            fetch('http://localhost:3000/pessoa', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
@@ -144,7 +144,7 @@
             if (!validarValor(valorNumerico)) return alert('Valor inválido');
             if (!validarCPF(data.pes_cpf)) return alert('CPF inválido');
 
-            fetch('http://localhost:3000/imoveis', {
+            fetch('http://localhost:3000/imovel', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
@@ -157,9 +157,5 @@
         }
 
     </script>
-
-
-
 </body>
-
 </html>
